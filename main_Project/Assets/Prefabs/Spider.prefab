@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -2369653657992091774}
   - component: {fileID: 2004917197684378203}
   - component: {fileID: -6925657421657151160}
+  - component: {fileID: -4007796461676728221}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Enemy
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4471127270276386757}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2965546, y: -11.291162, z: 0}
+  m_LocalPosition: {x: -4.31, y: -11.291162, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -758636391, guid: 957eff9eab0a1c242b76f953ac91de90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,6 +105,7 @@ MonoBehaviour:
   pos: {x: 0, y: 0}
   time: 3
   damage: 10
+  Gems: {fileID: 4248703309200011476, guid: af405d2e257c822478b17c054dd95b94, type: 3}
 --- !u!114 &2004917197684378203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 25
+  camera: {fileID: 0}
 --- !u!61 &-6925657421657151160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,7 +152,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.3739357}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -160,5 +163,57 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 2}
+  m_Size: {x: 3, y: 1.2521286}
   m_EdgeRadius: 0
+--- !u!60 &-4007796461676728221
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4471127270276386757}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.2, y: 0.90000004}
+      - {x: -1.8000001, y: 0.2}
+      - {x: -1.8000001, y: -0.6}
+      - {x: -0.90000004, y: -0.7}
+      - {x: 1.7, y: -0.7}
+      - {x: 1.7, y: 0.4}
+      - {x: 1.1, y: 0.90000004}
+  m_UseDelaunayMesh: 0

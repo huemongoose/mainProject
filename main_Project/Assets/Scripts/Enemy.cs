@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Vector2 pos;
     [SerializeField] float time;
     [SerializeField] int damage;
+    
 
     Vector2 point;
     // Start is called before the first frame update
@@ -31,9 +32,11 @@ public class Enemy : MonoBehaviour
         {
             SetnewDestination();
         }
+         
         
-        
-       
+
+
+
 
 
 

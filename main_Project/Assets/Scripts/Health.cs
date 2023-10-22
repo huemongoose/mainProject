@@ -5,7 +5,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int health = 100;
-    public GameObject camera;
+    public new GameObject camera;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,8 @@ public class Health : MonoBehaviour
         if(health <= 0)
         {
             Destroy(this.gameObject);
+            
+            
             if(this.gameObject.tag == "Player")
             {
                 camera.SetActive(true);
@@ -28,5 +31,9 @@ public class Health : MonoBehaviour
     public void Damage(int damage)
     {
         health -= damage;
+    }
+    public void Heal(int heal)
+    {
+        health += heal;
     }
 }

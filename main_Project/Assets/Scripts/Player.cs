@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField]  float playerSpeed = 10f;
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
+    public int gems = 0;
+    public int keys = 0;
     
     public Rigidbody2D rb;
     Vector2 movement;
@@ -24,7 +26,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString();
+        textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString() +"\n" + "Gems " + gems ;
+        if(keys > 0)
+        {
+            textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString() + "\n" + "Gems " + gems + "\n" + "Keys " + keys;
+        }
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movement.x);
@@ -46,7 +53,7 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("hit");
+            
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             this.GetComponent<Health>().Damage(enemy.getDamage());
         }
@@ -55,5 +62,17 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement* playerSpeed * Time.deltaTime);
+    }
+    public void addGems(int value)
+    {
+        gems += value;
+    }
+    public void addKey()
+    {
+        keys += 1;
+    }
+    public void useKey()
+    {
+        keys--;
     }
 }
