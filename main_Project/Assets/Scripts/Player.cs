@@ -10,9 +10,14 @@ public class Player : MonoBehaviour
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
     public bool hasBow = false;
     public bool hasBossKey = false;
+    public int arrows = 25;
     public int gems = 0;
     public int keys = 0;
-    
+    [SerializeField] GameObject rightArrow;
+    [SerializeField] GameObject leftArrow;
+    [SerializeField] GameObject arrow;
+    [SerializeField] GameObject downArrow;
+
     public Rigidbody2D rb;
     Vector2 movement;
     public Animator animator;
@@ -28,6 +33,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(this.GetComponent<Health>().health > 100)
         {
             this.GetComponent<Health>().health = 100;
@@ -42,6 +48,12 @@ public class Player : MonoBehaviour
             textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString() + "\n" + "Gems " + gems + "\n" + "Keys " + keys + "\n" + "Boss Key";
 
 
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Return) && hasBow && arrows > 0){
+            arrows--;
+            Shoot();
         }
 
 
@@ -68,7 +80,15 @@ public class Player : MonoBehaviour
         {
             
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+
             this.GetComponent<Health>().Damage(enemy.getDamage());
+        }
+        if(collision.gameObject.tag == "Boss")
+        {
+            
+            int damage = collision.gameObject.GetComponent<boss>().getDamage();
+
+            this.GetComponent<Health>().Damage(damage);
         }
     }
 
@@ -95,5 +115,32 @@ public class Player : MonoBehaviour
     public void useBossKey()
     {
         hasBossKey = false;
+    }
+    public void getArrows(int amt)
+    {
+        arrows += amt;
+    }
+    void Shoot()
+    {
+
+        
+        if (animator.GetFloat("lastY") < -.1)
+        {
+            Instantiate(downArrow, transform.position, Quaternion.identity);
+        }
+        if (animator.GetFloat("lastY") > .1)
+        {
+            Instantiate(arrow, transform.position, Quaternion.identity);
+        }
+        if (animator.GetFloat("lastX") > .1)
+        {
+            Instantiate(rightArrow, transform.position, Quaternion.identity);
+        }
+        if (animator.GetFloat("lastX") < -.1)
+        {
+            Instantiate(leftArrow, transform.position, Quaternion.identity);
+        }
+        
+
     }
 }

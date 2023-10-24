@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -3235232217828195760}
   - component: {fileID: 607872685292032150}
   - component: {fileID: 3815059990050130619}
+  - component: {fileID: 5376237312533565646}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -118,9 +119,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce9a55f5dc6d7b4d963c1e7acfca362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 20
   camera: {fileID: 0}
   animator: {fileID: 3815059990050130619}
+  Gem: {fileID: 4248703309200011476, guid: af405d2e257c822478b17c054dd95b94, type: 3}
+  Heart: {fileID: 2586853950713704430, guid: eaf00c119eec2284b8da637421536c05, type: 3}
+  sprite: {fileID: 4454804665927364345}
 --- !u!61 &-3235232217828195760
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -241,3 +245,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &5376237312533565646
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805929352731986624}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -1727539416700614778}
   - component: {fileID: 1885452237289340948}
   - component: {fileID: 3817796277553777774}
+  - component: {fileID: -8070775301693462309}
   m_Layer: 0
   m_Name: Apparition
   m_TagString: Enemy
@@ -121,6 +122,9 @@ MonoBehaviour:
   health: 60
   camera: {fileID: 0}
   animator: {fileID: 3817796277553777774}
+  Gem: {fileID: 4248703309200011476, guid: af405d2e257c822478b17c054dd95b94, type: 3}
+  Heart: {fileID: 2586853950713704430, guid: eaf00c119eec2284b8da637421536c05, type: 3}
+  sprite: {fileID: 2244919026200408412}
 --- !u!61 &-1727539416700614778
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -240,3 +244,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &-8070775301693462309
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949074458637055401}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

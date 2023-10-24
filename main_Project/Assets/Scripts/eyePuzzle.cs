@@ -14,6 +14,7 @@ public class eyePuzzle : MonoBehaviour
 
             this.gameObject.SetActive(false);
             Instantiate(closedEye, transform.position, Quaternion.identity);
+            
         }
     }
 }

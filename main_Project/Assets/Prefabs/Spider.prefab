@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6925657421657151160}
   - component: {fileID: -4007796461676728221}
   - component: {fileID: 8040047460519638310}
+  - component: {fileID: -1846058791168268818}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Enemy
@@ -121,6 +122,9 @@ MonoBehaviour:
   health: 25
   camera: {fileID: 0}
   animator: {fileID: 8040047460519638310}
+  Gem: {fileID: 4248703309200011476, guid: af405d2e257c822478b17c054dd95b94, type: 3}
+  Heart: {fileID: 2586853950713704430, guid: eaf00c119eec2284b8da637421536c05, type: 3}
+  sprite: {fileID: 5416217159724343987}
 --- !u!61 &-6925657421657151160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -239,3 +243,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &-1846058791168268818
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4471127270276386757}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

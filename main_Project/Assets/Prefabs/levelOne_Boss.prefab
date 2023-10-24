@@ -10,14 +10,15 @@ GameObject:
   m_Component:
   - component: {fileID: 157970660875212885}
   - component: {fileID: 3460485700271935993}
-  - component: {fileID: 3138144250118341473}
   - component: {fileID: -6051687090630471975}
   - component: {fileID: 5057851631044587394}
   - component: {fileID: 544992356675895605}
   - component: {fileID: 9076660871723238037}
+  - component: {fileID: 1075544707959881744}
+  - component: {fileID: 1486622457278223024}
   m_Layer: 0
   m_Name: levelOne_Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,23 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3138144250118341473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3197094560362907932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07434336a84340b44bfa1586e81a10ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  target: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
-  time: 5
-  damage: 25
 --- !u!114 &-6051687090630471975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +105,9 @@ MonoBehaviour:
   health: 250
   camera: {fileID: 0}
   animator: {fileID: 544992356675895605}
+  Gem: {fileID: 4248703309200011476, guid: af405d2e257c822478b17c054dd95b94, type: 3}
+  Heart: {fileID: 2586853950713704430, guid: eaf00c119eec2284b8da637421536c05, type: 3}
+  sprite: {fileID: 3460485700271935993}
 --- !u!60 &5057851631044587394
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -166,21 +153,25 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 2.0159693, y: -1.706751}
-      - {x: 1.5567807, y: -0.32252026}
+      - {x: 1.9498742, y: -0.33961123}
       - {x: 1.4096458, y: 0.37495148}
       - {x: 1.4354789, y: 0.87865484}
-      - {x: 0.646421, y: 2.1100461}
-      - {x: 1.0583346, y: 1.5266157}
-      - {x: -0.24320018, y: 1.470709}
+      - {x: 1.0395144, y: 2.5885947}
+      - {x: 1.1437896, y: 2.1077104}
+      - {x: 0.37207633, y: 2.1201677}
       - {x: -0.7688013, y: 2.0702622}
+      - {x: -1.1831411, y: 1.842138}
       - {x: -1.0833433, y: 1.1690682}
+      - {x: -1.3853707, y: 0.7634814}
       - {x: -1.0384896, y: 0.30018646}
-      - {x: -1.4603999, y: -0.093746245}
-      - {x: -1.9139616, y: -0.776726}
+      - {x: -1.7680383, y: 0.09425473}
+      - {x: -2.56342, y: -1.0160003}
       - {x: -1.6464208, y: -1.3080982}
       - {x: -2.4549465, y: -1.7}
-      - {x: -0.9470508, y: -1.4134011}
-      - {x: 1.8333334, y: -1.7}
+      - {x: -1.6633161, y: -1.9566218}
+      - {x: -0.69068563, y: -1.9261316}
+      - {x: 1.2402476, y: -1.9750712}
+      - {x: 2.158063, y: -1.9734561}
   m_UseDelaunayMesh: 0
 --- !u!95 &544992356675895605
 Animator:
@@ -248,3 +239,43 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9054292, y: 3.0891938}
   m_EdgeRadius: 0
+--- !u!114 &1075544707959881744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197094560362907932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d7803a291661643b87d56c91f7f4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 30
+--- !u!50 &1486622457278223024
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197094560362907932}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

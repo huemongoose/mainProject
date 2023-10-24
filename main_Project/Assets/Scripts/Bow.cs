@@ -11,6 +11,7 @@ public class Bow : MonoBehaviour
         {
             Player player = collision.gameObject.GetComponent<Player>();
             player.hasBow = true;
+            Destroy(this.gameObject);
         }
     }
 }

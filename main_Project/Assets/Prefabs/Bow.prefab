@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1716767637000753540}
   - component: {fileID: 4976295492915981147}
   - component: {fileID: -5014005855434199936}
+  - component: {fileID: 3566297744047535221}
   m_Layer: 0
   m_Name: Bow
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1471061981, guid: 957eff9eab0a1c242b76f953ac91de90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -142,3 +143,15 @@ PolygonCollider2D:
       - {x: -0.6, y: 0}
       - {x: -0.5, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &3566297744047535221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6984549321587658133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fd51fa63d0c434b95d742429b7593a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
