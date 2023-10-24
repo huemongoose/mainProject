@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField]  float playerSpeed = 10f;
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
+    public bool hasBow = false;
+    public bool hasBossKey = false;
     public int gems = 0;
     public int keys = 0;
     
@@ -26,11 +28,22 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(this.GetComponent<Health>().health > 100)
+        {
+            this.GetComponent<Health>().health = 100;
+        }
         textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString() +"\n" + "Gems " + gems ;
         if(keys > 0)
         {
             textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString() + "\n" + "Gems " + gems + "\n" + "Keys " + keys;
         }
+        if(hasBossKey)
+        {
+            textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString() + "\n" + "Gems " + gems + "\n" + "Keys " + keys + "\n" + "Boss Key";
+
+
+        }
+
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -74,5 +87,13 @@ public class Player : MonoBehaviour
     public void useKey()
     {
         keys--;
+    }
+    public void getBossKey()
+    {
+        hasBossKey = true;
+    }
+    public void useBossKey()
+    {
+        hasBossKey = false;
     }
 }

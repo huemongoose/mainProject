@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3098815630826271260}
   - component: {fileID: -1727539416700614778}
   - component: {fileID: 1885452237289340948}
+  - component: {fileID: 3817796277553777774}
   m_Layer: 0
   m_Name: Apparition
   m_TagString: Enemy
@@ -105,7 +106,6 @@ MonoBehaviour:
   pos: {x: 0, y: 0}
   time: 7
   damage: 10
-  Gems: {fileID: 4248703309200011476, guid: af405d2e257c822478b17c054dd95b94, type: 3}
 --- !u!114 &3098815630826271260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 60
   camera: {fileID: 0}
+  animator: {fileID: 3817796277553777774}
 --- !u!61 &-1727539416700614778
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -218,3 +219,24 @@ PolygonCollider2D:
       - {x: -0.90000004, y: 1.6}
       - {x: -1.5, y: 1.2}
   m_UseDelaunayMesh: 0
+--- !u!95 &3817796277553777774
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949074458637055401}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cc61100ae9146674798845e5ff7bbfb6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
