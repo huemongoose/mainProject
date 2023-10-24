@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 157970660875212885}
   - component: {fileID: 3460485700271935993}
   - component: {fileID: -6051687090630471975}
-  - component: {fileID: 5057851631044587394}
   - component: {fileID: 544992356675895605}
   - component: {fileID: 9076660871723238037}
   - component: {fileID: 1075544707959881744}
   - component: {fileID: 1486622457278223024}
+  - component: {fileID: 6158650574555861744}
   m_Layer: 0
   m_Name: levelOne_Boss
   m_TagString: Boss
@@ -107,72 +107,8 @@ MonoBehaviour:
   animator: {fileID: 544992356675895605}
   Gem: {fileID: 4248703309200011476, guid: af405d2e257c822478b17c054dd95b94, type: 3}
   Heart: {fileID: 2586853950713704430, guid: eaf00c119eec2284b8da637421536c05, type: 3}
+  arrows: {fileID: 0}
   sprite: {fileID: 3460485700271935993}
---- !u!60 &5057851631044587394
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3197094560362907932}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.6666667, y: 3.4}
-    newSize: {x: 0.55, y: 0.51}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.0159693, y: -1.706751}
-      - {x: 1.9498742, y: -0.33961123}
-      - {x: 1.4096458, y: 0.37495148}
-      - {x: 1.4354789, y: 0.87865484}
-      - {x: 1.0395144, y: 2.5885947}
-      - {x: 1.1437896, y: 2.1077104}
-      - {x: 0.37207633, y: 2.1201677}
-      - {x: -0.7688013, y: 2.0702622}
-      - {x: -1.1831411, y: 1.842138}
-      - {x: -1.0833433, y: 1.1690682}
-      - {x: -1.3853707, y: 0.7634814}
-      - {x: -1.0384896, y: 0.30018646}
-      - {x: -1.7680383, y: 0.09425473}
-      - {x: -2.56342, y: -1.0160003}
-      - {x: -1.6464208, y: -1.3080982}
-      - {x: -2.4549465, y: -1.7}
-      - {x: -1.6633161, y: -1.9566218}
-      - {x: -0.69068563, y: -1.9261316}
-      - {x: 1.2402476, y: -1.9750712}
-      - {x: 2.158063, y: -1.9734561}
-  m_UseDelaunayMesh: 0
 --- !u!95 &544992356675895605
 Animator:
   serializedVersion: 5
@@ -226,7 +162,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.051801264, y: 0.2590055}
+  m_Offset: {x: 0.18012393, y: 0.011526108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -237,7 +173,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9054292, y: 3.0891938}
+  m_Size: {x: 1.6487839, y: 2.594235}
   m_EdgeRadius: 0
 --- !u!114 &1075544707959881744
 MonoBehaviour:
@@ -267,7 +203,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -279,3 +215,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &6158650574555861744
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3197094560362907932}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.13748837}
+  serializedVersion: 2
+  m_Radius: 1.8974943

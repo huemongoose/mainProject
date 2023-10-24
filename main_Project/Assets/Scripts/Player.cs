@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField]  float playerSpeed = 10f;
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
     public bool hasBow = false;
+    public bool hasPotion = false;
     public bool hasBossKey = false;
     public int arrows = 25;
     public int gems = 0;
@@ -41,13 +42,16 @@ public class Player : MonoBehaviour
         textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString() +"\n" + "Gems " + gems ;
         if(keys > 0)
         {
-            textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString() + "\n" + "Gems " + gems + "\n" + "Keys " + keys;
+            textMeshProUGUI.text += "\n" + "Keys " + keys;
         }
         if(hasBossKey)
         {
-            textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString() + "\n" + "Gems " + gems + "\n" + "Keys " + keys + "\n" + "Boss Key";
+            textMeshProUGUI.text += "\n" + "Boss Key";
 
-
+        }
+        if (hasBow)
+        {
+            textMeshProUGUI.text += "\n" + "Arrows : " + arrows;
         }
 
 
@@ -118,7 +122,19 @@ public class Player : MonoBehaviour
     }
     public void getArrows(int amt)
     {
-        arrows += amt;
+        if (hasBow)
+        {
+            arrows += amt;
+        }
+        
+    }
+    public void getPotion()
+    {
+        hasPotion = true;
+    }
+    public void usePotion()
+    {
+        hasPotion = false;
     }
     void Shoot()
     {

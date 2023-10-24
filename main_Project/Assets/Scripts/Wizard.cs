@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class Wizard : MonoBehaviour
 {
-    
+    [SerializeField] GameObject fireball;
+    private void Update()
+    {
+        int rand = Random.Range(0, 20);
+        if(rand < 5)
+        {
+
+            Instantiate(fireball);
+        }
+    }
 
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    void newDestination()
-    {
-        
-    }
 }

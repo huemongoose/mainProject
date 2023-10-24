@@ -102,10 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07434336a84340b44bfa1586e81a10ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  target: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
-  time: 10
   damage: 5
 --- !u!114 &-1219354298046988127
 MonoBehaviour:
@@ -124,6 +120,7 @@ MonoBehaviour:
   animator: {fileID: 3815059990050130619}
   Gem: {fileID: 4248703309200011476, guid: af405d2e257c822478b17c054dd95b94, type: 3}
   Heart: {fileID: 2586853950713704430, guid: eaf00c119eec2284b8da637421536c05, type: 3}
+  arrows: {fileID: 7607672947826277820, guid: e07476dd3567ea64eaa7fedffea0c772, type: 3}
   sprite: {fileID: 4454804665927364345}
 --- !u!61 &-3235232217828195760
 BoxCollider2D:
@@ -157,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13214731, y: -0.22024536}
+  m_Offset: {x: -0.03393936, y: -0.3863325}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -168,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.965724, y: 1.3196735}
+  m_Size: {x: 1.6335506, y: 0.98749924}
   m_EdgeRadius: 0
 --- !u!60 &607872685292032150
 PolygonCollider2D:
@@ -214,15 +211,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.4, y: 0.8}
-      - {x: -1.2, y: 0.4}
-      - {x: -1.3000001, y: -0.2}
-      - {x: -1.3000001, y: -0.6}
+    - - {x: -0.77962536, y: 1.0609939}
+      - {x: -1.6033547, y: 0.5660871}
+      - {x: -1.7982606, y: -0.15254708}
+      - {x: -2.0355272, y: -0.8847195}
       - {x: -0.8, y: -1}
       - {x: 1.4, y: -1}
-      - {x: 1.5, y: -0.8}
-      - {x: 1.5, y: -0.2}
-      - {x: 0.5, y: 0.8}
+      - {x: 2.2118006, y: -0.9898136}
+      - {x: 2.2117996, y: -0.6033537}
+      - {x: 0.97453403, y: 1.1321733}
   m_UseDelaunayMesh: 0
 --- !u!95 &3815059990050130619
 Animator:
@@ -260,7 +257,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

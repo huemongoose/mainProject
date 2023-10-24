@@ -102,10 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07434336a84340b44bfa1586e81a10ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  target: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
-  time: 3
   damage: 10
 --- !u!114 &2004917197684378203
 MonoBehaviour:
@@ -124,6 +120,7 @@ MonoBehaviour:
   animator: {fileID: 8040047460519638310}
   Gem: {fileID: 4248703309200011476, guid: af405d2e257c822478b17c054dd95b94, type: 3}
   Heart: {fileID: 2586853950713704430, guid: eaf00c119eec2284b8da637421536c05, type: 3}
+  arrows: {fileID: 7607672947826277820, guid: e07476dd3567ea64eaa7fedffea0c772, type: 3}
   sprite: {fileID: 5416217159724343987}
 --- !u!61 &-6925657421657151160
 BoxCollider2D:
@@ -157,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.3739357}
+  m_Offset: {x: -0.17491484, y: 0.15131664}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -168,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 1.2521286}
+  m_Size: {x: 2.0141153, y: 0.8068905}
   m_EdgeRadius: 0
 --- !u!60 &-4007796461676728221
 PolygonCollider2D:
@@ -214,13 +211,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.2, y: 0.90000004}
-      - {x: -1.8000001, y: 0.2}
-      - {x: -1.8000001, y: -0.6}
+    - - {x: -1.5498297, y: 1.1862245}
+      - {x: -2.2770405, y: 0.2}
+      - {x: -3.0721092, y: -0.6636063}
       - {x: -0.90000004, y: -0.7}
       - {x: 1.7, y: -0.7}
-      - {x: 1.7, y: 0.4}
-      - {x: 1.1, y: 0.90000004}
+      - {x: 2.654082, y: -0.61768687}
+      - {x: 1.3544217, y: 1.1544232}
   m_UseDelaunayMesh: 0
 --- !u!95 &8040047460519638310
 Animator:
@@ -258,7 +255,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

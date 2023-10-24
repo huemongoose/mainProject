@@ -102,10 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07434336a84340b44bfa1586e81a10ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  target: {x: 0, y: 0}
-  pos: {x: 0, y: 0}
-  time: 4
   damage: 5
 --- !u!114 &-7042494603732714378
 MonoBehaviour:
@@ -124,6 +120,7 @@ MonoBehaviour:
   animator: {fileID: 8839037265349221614}
   Gem: {fileID: 4248703309200011476, guid: af405d2e257c822478b17c054dd95b94, type: 3}
   Heart: {fileID: 2586853950713704430, guid: eaf00c119eec2284b8da637421536c05, type: 3}
+  arrows: {fileID: 7607672947826277820, guid: e07476dd3567ea64eaa7fedffea0c772, type: 3}
   sprite: {fileID: 1420691046953500212}
 --- !u!61 &-8004972528035725937
 BoxCollider2D:
@@ -214,15 +211,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.90000004, y: 1.3000001}
-      - {x: -1.7, y: 1.2}
-      - {x: -1.8000001, y: 1}
-      - {x: -1.8000001, y: 0.5}
-      - {x: -1.7, y: 0.1}
-      - {x: -1.2, y: -0.2}
-      - {x: 1.8000001, y: -0.2}
+    - - {x: -0.03582287, y: 1.8868542}
+      - {x: -1.5625777, y: 1.8300637}
+      - {x: -1.9839623, y: 1.3703759}
+      - {x: -2.178616, y: 1.1514454}
+      - {x: -2.1218233, y: 0.5567913}
+      - {x: -2.059685, y: 0.1}
+      - {x: -1.8815091, y: -0.63540953}
+      - {x: 1.8757228, y: -0.7111313}
       - {x: 1.8000001, y: 0.7}
-      - {x: 1.2, y: 1.3000001}
+      - {x: 1.6164782, y: 1.6786164}
   m_UseDelaunayMesh: 0
 --- !u!95 &8839037265349221614
 Animator:
@@ -260,7 +258,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

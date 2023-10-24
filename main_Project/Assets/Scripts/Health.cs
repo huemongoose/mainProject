@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     [SerializeField] GameObject Gem;
     [SerializeField] GameObject Heart;
     [SerializeField] GameObject arrows;
+  
     int spawnCount = 1;
     public SpriteRenderer sprite;
     
@@ -29,6 +30,11 @@ public class Health : MonoBehaviour
         {
             if(this.gameObject.tag == "Player")
             {
+               if(this.GetComponent<Player>().hasPotion)
+                {
+                    health = 100;
+                    this.GetComponent<Player>().usePotion();
+                }
                 camera.SetActive(true);
                 Destroy(this.gameObject);
             }

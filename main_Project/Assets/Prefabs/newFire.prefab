@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9091507800180734970}
   - component: {fileID: 5799080990015117072}
   - component: {fileID: -7471292674806163316}
-  - component: {fileID: -7157016318714799514}
+  - component: {fileID: 175150997929008057}
   m_Layer: 0
   m_Name: newFire
   m_TagString: Untagged
@@ -167,8 +167,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.17}
   m_EdgeRadius: 0
---- !u!60 &-7157016318714799514
-PolygonCollider2D:
+--- !u!58 &175150997929008057
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -199,26 +199,6 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.17}
-    newSize: {x: 0.16, y: 0.17}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.02198179, y: 0.13763425}
-      - {x: -0.06, y: 0.085}
-      - {x: -0.09674725, y: 0.11567195}
-      - {x: -0.15989639, y: -0.016341975}
-      - {x: -0.08, y: -0.085}
-      - {x: -0.002842059, y: -0.16395143}
-      - {x: 0.08, y: -0.085}
-      - {x: 0.16134389, y: 0.016086947}
-      - {x: 0.08, y: 0.065}
-      - {x: 0.13134386, y: 0.1519891}
-  m_UseDelaunayMesh: 0
+  m_Offset: {x: -0.004875958, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.12888356
