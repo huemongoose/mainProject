@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
     [SerializeField]  float playerSpeed = 10f;
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
+  
     public bool hasBow = false;
     public bool hasPotion = false;
     public bool hasBossKey = false;
@@ -34,15 +36,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(this.GetComponent<Health>().health > 100)
+       
+
+        if (this.GetComponent<Health>().health > 100)
         {
             this.GetComponent<Health>().health = 100;
         }
-        textMeshProUGUI.text = "Health " + this.GetComponent<Health>().health.ToString() +"\n" + "Gems " + gems ;
+        textMeshProUGUI.text = "X" + this.GetComponent<Health>().health.ToString() +"\n"  + "\n"+  "X " + gems ;
         if(keys > 0)
         {
-            textMeshProUGUI.text += "\n" + "Keys " + keys;
+          
+            textMeshProUGUI.text += "\n" + "X" + keys;
         }
         if(hasBossKey)
         {
@@ -138,6 +142,7 @@ public class Player : MonoBehaviour
     }
     void Shoot()
     {
+       
 
         
         if (animator.GetFloat("lastY") < -.1)

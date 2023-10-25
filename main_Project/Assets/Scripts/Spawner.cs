@@ -42,7 +42,8 @@ public class Spawner : MonoBehaviour
             }
 
             enemyAmt--;
-        }
+        } 
+
 
 
     }

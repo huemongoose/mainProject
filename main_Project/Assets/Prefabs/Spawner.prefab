@@ -49,4 +49,4 @@ MonoBehaviour:
   Spiders: {fileID: 4471127270276386757, guid: 7e93786c29f8e2741bc5dfe21d299732, type: 3}
   Slimes: {fileID: 6805929352731986624, guid: ca4876eb7060eeb4ead6d26717fb2d47, type: 3}
   Wizards: {fileID: 301241779608606749, guid: 1a00c26e262e8d440831129ae3b01be5, type: 3}
-  enemyAmt: 1
+  enemyAmt: 2
