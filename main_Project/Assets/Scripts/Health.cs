@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int health = 100;
+    public   int health = 100;
+    public int  maxHealth = 100;
+
     public new GameObject camera;
     public Animator animator;
     [SerializeField] GameObject Gem;
@@ -14,10 +16,18 @@ public class Health : MonoBehaviour
   
     int spawnCount = 1;
     public SpriteRenderer sprite;
-    
+
+    [SerializeField] healthBar healthBar;
+
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        healthBar = GetComponentInChildren<healthBar>();
+    }
     void Start()
     {
+        healthBar.updateHealthBar(health, maxHealth);
                
     }
     void Update()
@@ -35,8 +45,15 @@ public class Health : MonoBehaviour
                     health = 100;
                     this.GetComponent<Player>().usePotion();
                 }
-                camera.SetActive(true);
-                Destroy(this.gameObject);
+                else
+                {
+                    this.GetComponent<Player>().die();
+                    health = 100;
+                    healthBar.updateHealthBar(health, maxHealth);
+                }
+                
+                
+                
             }
             else if (spawnCount == 0)
             {
@@ -74,10 +91,11 @@ public class Health : MonoBehaviour
 
         StartCoroutine(flashred());
         health -= damage;
+        healthBar.updateHealthBar(health, maxHealth);
     }
     public void Heal(int heal)
     {
-
+        healthBar.updateHealthBar(health, maxHealth);
         health += heal;
         
     }

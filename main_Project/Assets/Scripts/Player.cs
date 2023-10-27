@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     public int arrows = 25;
     public int gems = 0;
     public int keys = 0;
+
+    Vector2  startPos;
+
     [SerializeField] GameObject rightArrow;
     [SerializeField] GameObject leftArrow;
     [SerializeField] GameObject arrow;
@@ -28,6 +31,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        startPos = transform.position;
         
 
         
@@ -42,7 +46,7 @@ public class Player : MonoBehaviour
         {
             this.GetComponent<Health>().health = 100;
         }
-        textMeshProUGUI.text = "X" + this.GetComponent<Health>().health.ToString() +"\n"  + "\n"+  "X " + gems ;
+        textMeshProUGUI.text = "X " + gems ;
         if(keys > 0)
         {
           
@@ -164,4 +168,15 @@ public class Player : MonoBehaviour
         
 
     }
+    public void die()
+    {
+        StartCoroutine(Respawn(0f));
+    }
+    IEnumerator Respawn(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        transform.position = startPos;
+    }
+   
+    
 }

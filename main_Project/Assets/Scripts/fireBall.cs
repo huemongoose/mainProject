@@ -7,17 +7,25 @@ public class fireBall : MonoBehaviour
     [SerializeField] int damage = 20;
     [SerializeField] int speed = 15;
 
+    Rigidbody2D fireBallRb;
+    GameObject target;
+
     // Start is called before the first frame update
 
 
     // Update is called once per frame
-    private void Update()
+    private void Start()
     {
-        transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
+        fireBallRb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Player");
+        Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
+        fireBallRb.velocity = new Vector2(moveDir.x, moveDir.y);
+
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player" || collision.tag == "Enemy" || collision.tag == "Boss")
+        if(collision.tag == "Player" )
         {
             Health health  = collision.GetComponent<Health>();
             health.Damage(damage);

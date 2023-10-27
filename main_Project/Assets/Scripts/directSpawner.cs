@@ -19,8 +19,10 @@ public class directSpawner : MonoBehaviour
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
         bosses = GameObject.FindGameObjectsWithTag("Boss").Length;
+      
         if(!isComplete && playerIn && enemies == 0 && bosses == 0)
         {
+
 
             lockedDoor.SetActive(false);
             reward.SetActive(true);
@@ -35,10 +37,12 @@ public class directSpawner : MonoBehaviour
 
         if(collision.tag == "Player")
         {
+            
             playerIn = true;
             if (isComplete == false)
             {
                 DirectEnemy.SetActive(true);
+             
                 if (isLocked)
                 {
                     lockedDoor.SetActive(true);
@@ -46,5 +50,6 @@ public class directSpawner : MonoBehaviour
             }
             
         }
+        
     }
 }

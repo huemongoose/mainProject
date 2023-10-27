@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8720927685159636744}
   - component: {fileID: 6971423758733236467}
   - component: {fileID: 5220352457933841749}
+  - component: {fileID: 1400655719319505564}
   m_Layer: 0
   m_Name: eyeEnemy
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1708880899747133280}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.67911, y: 14.7206, z: 0}
+  m_LocalPosition: {x: 1.4729156, y: 134.37988, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,3 +144,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23, y: 0.17}
   m_EdgeRadius: 0
+--- !u!114 &1400655719319505564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708880899747133280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07434336a84340b44bfa1586e81a10ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  shootingRange: 0
+  fireBall: {fileID: 0}
+  fireBallParent: {fileID: 0}
+  speed: 2
+  isShooter: 0
+  fireRate: 2
+  nextFireTime: 0
+  distance: 0
+  range: 0
