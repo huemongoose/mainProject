@@ -12,11 +12,13 @@ public class boss : MonoBehaviour
     public GameObject fireBallParent;
     public float speed;
     public float fireRate = 1f;
+    public float eyeSpawnRate = 2f;
     public float nextFireTime;
 
     [SerializeField] float distance;
     [SerializeField] float range;
 
+    public GameObject eyeEnemy;
 
 
 
@@ -37,6 +39,12 @@ public class boss : MonoBehaviour
             Instantiate(fireBall, fireBallParent.transform.position, Quaternion.identity);
             Instantiate(fireBall, fireBallParent.transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate;
+        }
+        else if (distanceFromPlayer <= shootingRange && eyeSpawnRate < Time.time)
+        {
+            Instantiate(eyeEnemy, fireBallParent.transform.position, Quaternion.identity);
+            Instantiate(eyeEnemy, fireBallParent.transform.position, Quaternion.identity);
+            eyeSpawnRate = Time.time + fireRate;
         }
         else if (distanceFromPlayer < range)
         {

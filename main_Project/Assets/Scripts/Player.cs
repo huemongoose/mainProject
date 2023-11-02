@@ -4,9 +4,13 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using System;
 
 public class Player : MonoBehaviour
 {
+    public static event Action OnPlayerDeath;
+
+
     [SerializeField]  float playerSpeed = 10f;
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
   
@@ -29,9 +33,14 @@ public class Player : MonoBehaviour
     public Animator animator;
     
 
+
+
     void Start()
     {
+        Health health  = this.GetComponent<Health>();
+        health.health = health.maxHealth;
         startPos = transform.position;
+        EnablePlayerMovement();
         
 
         
@@ -170,13 +179,31 @@ public class Player : MonoBehaviour
     }
     public void die()
     {
-        StartCoroutine(Respawn(0f));
+        OnPlayerDeath?.Invoke();
+        
     }
-    IEnumerator Respawn(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        transform.position = startPos;
-    }
-   
     
+
+    void DisablePlayerMovement()
+    {
+        animator.enabled = false;
+        rb.bodyType = RigidbodyType2D.Static;
+    }
+    void EnablePlayerMovement()
+    {
+        animator.enabled = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+
+    }
+
+    private void OnEnable()
+    {
+        OnPlayerDeath += DisablePlayerMovement;
+    }
+    private void OnDisable()
+    {
+        OnPlayerDeath -= DisablePlayerMovement;
+    }
+
+
 }

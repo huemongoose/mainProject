@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class swordStone : MonoBehaviour
+{
+    public Animator animator;
+    // Start is called before the first frame update
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Health health = collision.gameObject.GetComponent<Health>();
+        health.health = 100;
+        animator.SetBool("isTaken", true);
+        
+    }
+}

@@ -191,15 +191,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d7803a291661643b87d56c91f7f4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 30
+  damage: 15
   shootingRange: 6
   fireBall: {fileID: 5052314798535953615, guid: 01702d029208e41489b3d6b5a13c1d00, type: 3}
   fireBallParent: {fileID: 6627054787845440337}
   speed: 6
-  fireRate: 1
+  fireRate: 2
+  eyeSpawnRate: 8
   nextFireTime: 0
   distance: 0
   range: 10
+  eyeEnemy: {fileID: 1708880899747133280, guid: 4187b02bfbba8b440aa58fad58da7cc5, type: 3}
 --- !u!50 &1486622457278223024
 Rigidbody2D:
   serializedVersion: 4

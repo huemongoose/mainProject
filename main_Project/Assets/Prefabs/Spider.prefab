@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07434336a84340b44bfa1586e81a10ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 7
   shootingRange: 0
   fireBall: {fileID: 0}
   fireBallParent: {fileID: 0}

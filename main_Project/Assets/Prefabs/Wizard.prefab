@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07434336a84340b44bfa1586e81a10ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
   shootingRange: 7
   fireBall: {fileID: 6772028996789744681, guid: 0dd73f0d6695aad4099d0bc2f1316c60, type: 3}
   fireBallParent: {fileID: 1161740235666288377}
