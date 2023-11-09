@@ -18,8 +18,11 @@ public class Enemy : MonoBehaviour
     public float fireRate = 2f;
     public float nextFireTime;
 
+    public bool playerStatus;
+
     [SerializeField] float distance;
     [SerializeField] float range;
+
      
 
 
@@ -27,6 +30,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerStatus = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isDead ;
         player = GameObject.FindGameObjectWithTag("Player").transform;
        
     }
@@ -36,12 +40,12 @@ public class Enemy : MonoBehaviour
     {
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
         
-        if(isShooter && distanceFromPlayer <= shootingRange && nextFireTime < Time.time)
+        if(!playerStatus && isShooter && distanceFromPlayer <= shootingRange && nextFireTime < Time.time)
         {
             Instantiate(fireBall, fireBallParent.transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate;
         }
-        else if(distanceFromPlayer < range) {
+        else if(!playerStatus && distanceFromPlayer < range) {
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
         }
         

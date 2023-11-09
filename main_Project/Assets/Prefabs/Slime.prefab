@@ -368,9 +368,9 @@ GameObject:
   - component: {fileID: 7432035685125862644}
   - component: {fileID: -1219354298046988127}
   - component: {fileID: -3235232217828195760}
-  - component: {fileID: 607872685292032150}
   - component: {fileID: 3815059990050130619}
   - component: {fileID: 5376237312533565646}
+  - component: {fileID: 5414880692199434766}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -534,60 +534,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6335506, y: 0.98749924}
   m_EdgeRadius: 0
---- !u!60 &607872685292032150
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6805929352731986624}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
-    newSize: {x: 6.4, y: 6.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.77962536, y: 1.0609939}
-      - {x: -1.6033547, y: 0.5660871}
-      - {x: -1.7982606, y: -0.15254708}
-      - {x: -2.0355272, y: -0.8847195}
-      - {x: -0.8, y: -1}
-      - {x: 1.4, y: -1}
-      - {x: 2.2118006, y: -0.9898136}
-      - {x: 2.2117996, y: -0.6033537}
-      - {x: 0.97453403, y: 1.1321733}
-  m_UseDelaunayMesh: 0
 --- !u!95 &3815059990050130619
 Animator:
   serializedVersion: 5
@@ -636,6 +582,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &5414880692199434766
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805929352731986624}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.5
 --- !u!1 &8883334720736887247
 GameObject:
   m_ObjectHideFlags: 0

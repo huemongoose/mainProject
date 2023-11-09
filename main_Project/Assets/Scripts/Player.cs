@@ -11,15 +11,19 @@ public class Player : MonoBehaviour
     public static event Action OnPlayerDeath;
 
 
-    [SerializeField]  float playerSpeed = 10f;
+    public  float playerSpeed = 10f;
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
   
     public bool hasBow = false;
+    public bool hasFireStaff = false;
+
     public bool hasPotion = false;
     public bool hasBossKey = false;
     public int arrows = 25;
     public int gems = 0;
     public int keys = 0;
+
+    public  bool isDead = false;
 
     Vector2  startPos;
 
@@ -50,11 +54,6 @@ public class Player : MonoBehaviour
     void Update()
     {
        
-
-        if (this.GetComponent<Health>().health > 100)
-        {
-            this.GetComponent<Health>().health = 100;
-        }
         textMeshProUGUI.text = "X " + gems ;
         if(keys > 0)
         {
@@ -179,6 +178,7 @@ public class Player : MonoBehaviour
     }
     public void die()
     {
+        isDead = true;
         OnPlayerDeath?.Invoke();
         
     }

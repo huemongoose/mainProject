@@ -5,12 +5,28 @@ using UnityEngine;
 public class AttackArea : MonoBehaviour
 {
     private int damage = 25;
-
+    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Health>() != null)
+        {
+            Health health = collision.GetComponent<Health>();
+            health.Damage(damage);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.GetComponent<Health>() != null)
         {
             Health health = collider.GetComponent<Health>();
+            health.Damage(damage);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Health>() != null)
+        {
+            Health health = collision.GetComponent<Health>();
             health.Damage(damage);
         }
     }

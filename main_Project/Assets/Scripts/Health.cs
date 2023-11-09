@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public   int health = 150;
-    public int  maxHealth = 150;
+    public   int health = 100;
+    public int  maxHealth = 100;
 
     public new GameObject camera;
     public Animator animator;
@@ -44,6 +44,7 @@ public class Health : MonoBehaviour
                 {
                     health = 100;
                     this.GetComponent<Player>().usePotion();
+                    healthBar.updateHealthBar(health, maxHealth);
                 }
                 else
                 {

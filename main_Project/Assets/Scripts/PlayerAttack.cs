@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private bool attack = false;
-    private float timeToAttack = .25f;
-    private float timer = 0f;
 
 
     private GameObject attackArea;
@@ -37,18 +34,19 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(animator.GetFloat("lastY") < -.1)
+            if (animator.GetFloat("lastY") < -.1)
             {
                 Attack(0);
             }
-            else if(animator.GetFloat("lastY") > .1)
+            else if (animator.GetFloat("lastY") > .1)
             {
                 Attack(1);
             }
-            else if(animator.GetFloat("lastX") > .1){
-                Attack(2) ;
+            else if (animator.GetFloat("lastX") > .1)
+            {
+                Attack(2);
             }
-            if(animator.GetFloat("lastX") < -.1)
+            if (animator.GetFloat("lastX") < -.1)
             {
                 Attack(3);
             }
@@ -59,22 +57,8 @@ public class PlayerAttack : MonoBehaviour
 
             animator.SetBool("isAttack", true);
 
-            
-            
-        }
-        if (attack)
-        {
-            timer += Time.deltaTime;
-            if (timer >= timeToAttack)
-            {
-                timer = 0;
-                attack = false;
-                attackArea.SetActive(attack);
-                RightAttackArea.SetActive(attack);
-                LeftAttackArea.SetActive(attack);
-                backAttackArea.SetActive(attack);
-                animator.SetBool("isAttack", false);
-            }
+
+
         }
 
 
@@ -84,20 +68,19 @@ public class PlayerAttack : MonoBehaviour
     }
     private void Attack(int n)
     {
-        attack = true;
         switch (n)
         {
             case 0:
-                attackArea.SetActive(attack);
+                attackArea.SetActive(true);
                 break;
             case 1:
-                backAttackArea.SetActive(attack);
+                backAttackArea.SetActive(true);
                 break;
             case 2:
-                LeftAttackArea.SetActive(attack);
+                LeftAttackArea.SetActive(true);
                 break;
             case 3:
-                RightAttackArea.SetActive(attack);
+                RightAttackArea.SetActive(true);
                 break;
         }
     }

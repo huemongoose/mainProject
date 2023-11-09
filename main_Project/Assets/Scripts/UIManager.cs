@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
     }
     public void RestartLevel()
     {
+        Destroy(this.gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
