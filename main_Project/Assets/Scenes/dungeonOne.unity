@@ -3874,7 +3874,7 @@ Transform:
   m_GameObject: {fileID: 575181627}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.06, y: -11.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15998,6 +15998,7 @@ MonoBehaviour:
   playerSpeed: 10
   textMeshProUGUI: {fileID: 6387246881022763621}
   hasBow: 0
+  hasFireStaff: 0
   hasPotion: 0
   hasBossKey: 0
   arrows: 25
@@ -16008,6 +16009,7 @@ MonoBehaviour:
   leftArrow: {fileID: 2638073280604660728, guid: b5c4c5b85e058f5419b46fcb3039524f, type: 3}
   arrow: {fileID: 7607672947826277820, guid: ff05cb97d0fc7014db2e0f6f02396b9a, type: 3}
   downArrow: {fileID: 3415243582876149124, guid: 8273f5180ca056840a3b7cd08806f3dc, type: 3}
+  playerFireBall: {fileID: 0}
   rb: {fileID: 1732016344392668225}
   animator: {fileID: 8884901875480922476}
 --- !u!222 &6050545111978599800

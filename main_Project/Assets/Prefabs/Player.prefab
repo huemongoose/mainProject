@@ -561,15 +561,18 @@ MonoBehaviour:
   playerSpeed: 10
   textMeshProUGUI: {fileID: 7900899455428783561}
   hasBow: 0
+  hasFireStaff: 0
   hasPotion: 0
   hasBossKey: 0
   arrows: 25
   gems: 0
   keys: 0
+  isDead: 0
   rightArrow: {fileID: 7632813576917047915, guid: 06222c96f02ec7d4ca3dcf6868f21f7a, type: 3}
   leftArrow: {fileID: 2638073280604660728, guid: b5c4c5b85e058f5419b46fcb3039524f, type: 3}
   arrow: {fileID: 7607672947826277820, guid: ff05cb97d0fc7014db2e0f6f02396b9a, type: 3}
   downArrow: {fileID: 3415243582876149124, guid: 8273f5180ca056840a3b7cd08806f3dc, type: 3}
+  playerFireBall: {fileID: 7137082007186083812, guid: 6e4e21c75515e2a468dbbad4992996da, type: 3}
   rb: {fileID: -5978257254220063763}
   animator: {fileID: 5641935206727517888}
 --- !u!114 &6390842743381251134
@@ -584,11 +587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fabe5f6a5713674ea41aa08909eb2e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 0
-  attackArea: {fileID: 0}
-  backAttackArea: {fileID: 0}
-  LeftAttackArea: {fileID: 0}
-  RightAttackArea: {fileID: 0}
   animator: {fileID: 5641935206727517888}
 --- !u!61 &6314069052562514091
 BoxCollider2D:
@@ -1412,7 +1410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0.9}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8698506965173286702
@@ -1449,7 +1447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.80000305, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7533190196612746730

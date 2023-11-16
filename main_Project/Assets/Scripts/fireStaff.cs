@@ -12,10 +12,7 @@ public class fireStaff : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q) && player.hasFireStaff)
-        {
-            Instantiate(fireball);
-        }
+        
     }
 
 

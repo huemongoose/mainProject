@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4b8663520952fd1439a5878eadad5bb7
+  - enabled: 1
+    path: Assets/Scenes/OpeningScene.unity
+    guid: fca2c45f570daca41b8f65086c76d840
+  - enabled: 1
     path: Assets/Scenes/dungeonOne.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/dungeon2.unity
     guid: 72687a748463c5a43a421c9e8fa7e281
-  - enabled: 1
-    path: Assets/Scenes/OpeningScene.unity
-    guid: fca2c45f570daca41b8f65086c76d840
   m_configObjects: {}

@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject arrow;
     [SerializeField] GameObject downArrow;
 
+    [SerializeField] GameObject playerFireBall;
+
     public Rigidbody2D rb;
     Vector2 movement;
     public Animator animator;
@@ -41,6 +43,10 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+
+        gems = gameManager.getGems();
+        hasBow = gameManager.getBow();
+        hasFireStaff = gameManager.getStaff();
         Health health  = this.GetComponent<Health>();
         health.health = health.maxHealth;
         startPos = transform.position;
@@ -74,6 +80,10 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && hasBow && arrows > 0){
             arrows--;
             Shoot();
+        }
+        if(Input.GetKeyDown(KeyCode.Q) && hasFireStaff)
+        {
+            Instantiate(playerFireBall);
         }
 
 
@@ -119,6 +129,7 @@ public class Player : MonoBehaviour
     public void addGems(int value)
     {
         gems += value;
+        gameManager.addGems(value);
     }
     public void addKey()
     {
@@ -179,7 +190,10 @@ public class Player : MonoBehaviour
     public void die()
     {
         isDead = true;
+        gameManager.gems = 0;
+       
         OnPlayerDeath?.Invoke();
+        
         
     }
     

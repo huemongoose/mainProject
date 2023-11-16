@@ -10,6 +10,7 @@ public class pickUpStaff : MonoBehaviour
         {
             Player player = collision.GetComponent<Player>();
             player.hasFireStaff = true;
+            gameManager.addStaff();
             Destroy(this.gameObject);
         }
     }
