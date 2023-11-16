@@ -11,14 +11,14 @@ public class sceneManager : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(SceneManager.GetActiveScene().name == "dungeonOne")
+        if(SceneManager.GetActiveScene().name == "endScreen")
         {
-            SceneManager.LoadScene(sceneName: "dungeon2");
+            SceneManager.LoadScene(0);
         }
-        else if (SceneManager.GetActiveScene().name == "dungeon2")
+        else
         {
-            SceneManager.LoadScene(sceneName: "dungeonOne");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-       
+        
     }
 }

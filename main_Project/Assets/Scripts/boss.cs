@@ -20,6 +20,8 @@ public class boss : MonoBehaviour
 
     public GameObject eyeEnemy;
 
+    
+
 
 
     // Start is called before the first frame update
@@ -50,6 +52,9 @@ public class boss : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
         }
+
+
+        
 
 
 
