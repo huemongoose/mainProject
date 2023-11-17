@@ -34,6 +34,11 @@ public class boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // taken from
+        // https://www.youtube.com/watch?v=lHLZxd0O6XY&pp=ygUbaG93IHRvIHdyaXRlIGVuZW15IG1vdmVtZW50
+
+
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
         if (distanceFromPlayer <= shootingRange && nextFireTime < Time.time)
@@ -68,6 +73,8 @@ public class boss : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+
+
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, range);
         

@@ -196,8 +196,8 @@ public class Player : MonoBehaviour
         
         
     }
-    
 
+    //respawn taken from https://www.youtube.com/watch?v=ZfRbuOCAeE8&pp=ygUSdW5pdHkgZGFtYWdlIGNvbG9y
     void DisablePlayerMovement()
     {
         animator.enabled = false;
